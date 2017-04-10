@@ -51,11 +51,14 @@
     
     typedef int banana;
     unsigned banana i;    /*非法*/
+    
+    
     其次在连续几个变量声明中，用typedef定义的类型能保证声明中所有变量均为同一类型，#define不能。
     例如：
     #define int_ptr int *
     int_prt chalk, cheese;
     经过宏扩展，第二行变为：
     int * chalk, cheese;   /*此时两个变量不是同一类型*/
+    
     typedef cahr * char_ptr;
-    char_ptr bentley,rolls;    /*此时两个变量都是指向char型的指针*/
+    char_ptr bentley,rolls;    /*此时两个变量都是指向char型的指针*/ 
