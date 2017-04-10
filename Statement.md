@@ -43,3 +43,19 @@
      *一个是int，一个是prt_to_func
      *返回值是prt_to_func
      */
+### 到了最想知道的typedef和#define的区别
+    首先，可以用其他类型说明符对宏进行扩展，typedef不能。
+    例如：
+    #define peach int
+    unsigned peach i;    /*没毛病*/
+    
+    typedef int banana;
+    unsigned banana i;    /*非法*/
+    其次在连续几个变量声明中，用typedef定义的类型能保证声明中所有变量均为同一类型，#define不能。
+    例如：
+    #define int_ptr int *
+    int_prt chalk, cheese;
+    经过宏扩展，第二行变为：
+    int * chalk, cheese;   /*此时两个变量不是同一类型*/
+    typedef cahr * char_ptr;
+    char_ptr bentley,rolls;    /*此时两个变量都是指向char型的指针*/
