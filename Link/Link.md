@@ -50,10 +50,10 @@
 3. 编译器期望在确定的目录找到库,<br/>
 `-Lpathname和-Rpathname`
 4. 观察头文件，确认所使用的函数库<br/>
-<math.h>  —————————>  /usr/lib/libm.so  ————————>  -lm
-<math.h>  —————————>  /usr/lib/libm.a   ————————>  -dn -lm
-<stdio.h> —————————>  /usr/lib/libc.so  ————————>  自动链接
-”/usr/my/include/XX.h“ ————————>  /usr/my/lib/libXX.so  ————————>  -L/usr/my/lib -lXX
-<thread.h>—————————>/usr/lib/libthread.so————————> -lthread
-<curses.h>—————————>/usr/lib/libcurses.so————————> -lcurses
-<sys/socket.h>—————>/usr/lib/libsocket.so————————> -lsocket
+<math.h>  —————————>  /usr/lib/libm.so  ————————>  -lm<br/>
+<math.h>  —————————>  /usr/lib/libm.a   ————————>  -dn -lm<br/>
+<stdio.h> —————————>  /usr/lib/libc.so  ————————>  自动链接<br/>
+”/usr/my/include/XX.h“ ————————>  /usr/my/lib/libXX.so  ————————>  -L/usr/my/lib -lXX<br/>
+<thread.h>—————————>/usr/lib/libthread.so————————> -lthread<br/>
+<curses.h>—————————>/usr/lib/libcurses.so————————> -lcurses<br/>
+<sys/socket.h>—————>/usr/lib/libsocket.so————————> -lsocket<br/>
