@@ -50,6 +50,6 @@
 3. 编译器期望在确定的目录找到库,<br/>
 `-Lpathname和-Rpathname`
 4. 观察头文件，确认所使用的函数库<br/>
-   #include 文件名               库路径名                所用的编译器选项
-   <math.h>                 /usr/lib/libm.so                -lm
+>#include 文件名               库路径名                所用的编译器选项
+ <math.h>                 /usr/lib/libm.so                -lm
 
