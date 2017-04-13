@@ -64,4 +64,5 @@ ld:underfined symbol<br/>
 make: Fatal error: Command failed for target 'prog'<br/>
 它提示找不到符号xdr_reference的定义。这里有一种方法，可以通过它找到需要链接的库。基本想法是使用nm命令在/usr/lib的每个
 函数库中浏览所有符号，从中寻找丢失的符号（或者其他目录）。通过grep设定需要搜索的符号，并过滤掉标记为”UNDEF“的符号（在该
-函数库中有引用，但并不是在此处定义）。结果显示xdr_reference位于libXX库，需要在编译器命令末尾加上-lXX。
+函数库中有引用，但并不是在此处定义）。结果显示xdr_reference位于libXX库，需要在编译器命令末尾加上-lXX。<br/>
+5. 编译器命令行中的各个静态链接库出现的顺序是非常重要的！
