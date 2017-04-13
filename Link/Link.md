@@ -22,8 +22,8 @@
 >任何人都可以创建静态或动态函数库。只需简单编译一些不含main()的代码，并把编译生成的.o文件用正确的工具处理
  ————静态库使用”ar“(.a扩展名，archive)<br/>————动态库使用”ld“(.so扩展名，shared libraries)
  
-动态链接库可以用-G来创建：
-`cc -o libfruit.so -G tomato.c`
-然后利用这个库编写程序，并且使用以下方法链接：
-`cc test.c -L/home/linden -R/home/lindeb -lfruit            //是字母’l‘，不是数字’1‘`
--L和-R是分别告诉链接器在”链接“时和”运行“时需要从哪个目录寻找链接的函数库
+动态链接库可以用-G来创建：<br/>
+`cc -o libfruit.so -G tomato.c`<br/>
+然后利用这个库编写程序，并且使用以下方法链接：<br/>
+`cc test.c -L/home/linden -R/home/lindeb -lfruit            //是字母’l‘，不是数字’1‘`<br/>
+-L和-R是分别告诉链接器在”链接“时和”运行“时需要从哪个目录寻找链接的函数库<br/>
