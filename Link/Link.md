@@ -57,3 +57,11 @@
 <thread.h>—————>/usr/lib/libthread.so————> -lthread<br/>
 <curses.h>—————>/usr/lib/libcurses.so————> -lcurses<br/>
 <sys/socket.h>————>/usr/lib/libsocket.so————> -lsocket<br/>
+>如果在链接过程遇到下面这种错误：
+ld:underfined symbol
+  _xdr_reference
+*** Error code 2
+make: Fatal error: Command failed for target 'prog'
+它提示找不到符号xdr_reference的定义。这里有一种方法，可以通过它找到需要链接的库。基本想法是使用nm命令在/usr/lib的每个
+函数库中浏览所有符号，从中寻找丢失的符号（或者其他目录）。通过grep设定需要搜索的符号，并过滤掉标记为”UNDEF“的符号（在该
+函数库中有引用，但并不是在此处定义）。结果显示xdr_reference位于libXX库，需要在编译器命令末尾加上-lXX。
