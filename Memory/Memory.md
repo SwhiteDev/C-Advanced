@@ -58,10 +58,10 @@ C语言通常并不使用垃圾回收器，这些C程序在使用malloc()和free
 3. 指针释放引起的错误：释放同一个内存两次;释放一卡未曾malloc分配的内存;或释放使用中的内存，或者释放一个无效指针。<br/>
 >如何在链表中释放元素<br/>
 在遍历链表时正确释放元素的方法是使用临时变量存储下一个元素的地址。这样就可以安全的在任何时候释放当前元素，不必担心在
-取下一个元素的地址时还要引用它:
-struct node *p, *start, *tmp;
-for(p = start; p;p = tmp)
-{
-    tmp = p -> next;
-    free(p);
-}
+取下一个元素的地址时还要引用它:<br/>
+`struct node *p, *start, *tmp;`<br/>
+`for(p = start; p;p = tmp)`<br/>
+`{`<br/>
+`    tmp = p -> next;`<br/>
+`    free(p);`<br/>
+`}`<br/>
