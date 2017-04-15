@@ -64,4 +64,4 @@ C语言通常并不使用垃圾回收器，这些C程序在使用malloc()和free
 `{`<br/>
 `    tmp = p -> next;`<br/>
 `    free(p);`<br/>
-`}`<br/>
+`}`
